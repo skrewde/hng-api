@@ -1,0 +1,15 @@
+{
+  "name": "api-endpoint-(hng)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "run": "node server.js"
+  },
+  "keywords": [],
+  "author": "Sierra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
