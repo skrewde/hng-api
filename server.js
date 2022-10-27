@@ -1,11 +1,13 @@
 
 const express = require('express');
 const app = express();
-app.get('/', (req, res) => {
-    res.send("Hello world!");
-})
+
 const port = process.env.PORT || 5000;
-app.listen(port, () => `Server running on port ${port} 🔥`);
+app.listen(port, () => `Server running on port ${port}`);
+
+app.get('/', (req, res) => {
+    res.send(`This is the first HNG task. Append "/user" to the url to view the JSON`);
+})
 
 app.get('/user', (req, res) => {
     res.status(200).send({
