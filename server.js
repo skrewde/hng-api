@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-
+const port = process.env.PORT || 5000;
 
 app.use(cors({
-    origin: '*'
+    origin: 'https://misty-rat.up.railway.app/'
 }));
 
-// app.listen(port, () => `Server running on port ${port}`);
+app.listen(port, () => `Server running on port ${port}`);
 
 app.get('/', (req, res) => {
     res.send(`This is the first HNG task. Append "/user" to the url to view the JSON`);
