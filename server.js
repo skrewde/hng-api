@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
+// const cors = require('cors');
 const port = process.env.PORT || 5000;
 
-app.use(cors());
+// app.use(cors());
 
 app.listen(port, () => `Server running on port ${port}`);
 
@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/user', (req, res) => {
-    res.status(200).send({
+    res.status(200).set('Access-Control-Allow-Origin', '*').send({
         slackUsername: 'skrewde',
         backend:true,
         age:22,
