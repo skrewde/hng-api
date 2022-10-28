@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/user', (req, res) => {
     res.status(200);
-    res.set('Access-Control-Allow-Origin', '*');
+    // res.set('Access-Control-Allow-Origin', '*');
     res.send({
         slackUsername: 'skrewde',
         backend:true,
