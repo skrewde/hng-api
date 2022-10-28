@@ -1,11 +1,9 @@
 const express = require('express');
 const app = express();
-// const cors = require('cors');
+const cors = require('cors');
 const port = process.env.PORT || 5000;
 
-// app.use(cors({
-//     origin: 'https://misty-rat.up.railway.app/'
-// }));
+app.use(cors());
 
 app.listen(port, () => `Server running on port ${port}`);
 
